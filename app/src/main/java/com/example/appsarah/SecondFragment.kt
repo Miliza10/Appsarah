@@ -19,25 +19,29 @@ class SecondFragment : Fragment() {
         // Inflate the layout for this fragment
         val _view = inflater.inflate(R.layout.fragment_secound, container, false)
         val btnShow = _view.findViewById<Button>(R.id.btnShow)
+        btnShow.setOnClickListener {
+            showButtonSheet()
+        }
 
         return _view
+    }
 
 
-        fun showButtonSheet(view: View) {
-            val bottomSheetDialog = BottomSheetDialog(requireContext())
-            val bottomSheetView = layoutInflater.inflate(R.layout.buttonsheet, null)
-            val btnClose = bottomSheetView.findViewById<Button>(R.id.IDButton)
+            fun showButtonSheet() {
+        val bottomSheetDialog = BottomSheetDialog(requireContext())
+        val bottomSheetView = layoutInflater.inflate(R.layout.buttonsheet, null)
+        val btnClose = bottomSheetView.findViewById<Button>(R.id.IDButton)
 
-            2   // Set a click listener for the button in the bottom sheet
-            btnClose.setOnClickListener {
-                bottomSheetDialog.dismiss() // Close the bottom sheet when the button is clicked
-            }
-
-            bottomSheetDialog.setContentView(bottomSheetView)
-            bottomSheetDialog.show()
+        2   // Set a click listener for the button in the bottom sheet
+        btnClose.setOnClickListener {
+            bottomSheetDialog.dismiss() // Close the bottom sheet when the button is clicked
         }
+
+        bottomSheetDialog.setContentView(bottomSheetView)
+        bottomSheetDialog.show()
     }
 }
+
 
 
 

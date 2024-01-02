@@ -16,8 +16,8 @@ class tablayoutactivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this ,R.layout.activity_tablayoutactivity)
 
 
-        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("First"))
-        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("Second"))
+        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("IMAGE"))
+        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("MESSAGE"))
 
         val adapter = FragmentPageAdapter(supportFragmentManager,lifecycle)
         binding.viewPager22.adapter = adapter
